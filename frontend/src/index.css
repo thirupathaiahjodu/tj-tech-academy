@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent:  #6c47ff;
+  --accent2: #a855f7;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #eeeeff 0%, #f0e8ff 40%, #e8eeff 100%);
+  background-attachment: fixed;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ❌ NO #root display:flex — MainLayout handles layout */
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #6c47ff; }
+
+::selection { background: #ede9fe; color: #6c47ff; }
+
+@keyframes fadeUp  { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes grad    { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }

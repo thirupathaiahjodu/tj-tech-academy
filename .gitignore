@@ -1,0 +1,21 @@
+# ── BACKEND ──
+backend/.env
+backend/venv/
+backend/env/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/**/*.pyc
+backend/db.sqlite3
+backend/media/
+
+# ── FRONTEND ──
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+*.log
