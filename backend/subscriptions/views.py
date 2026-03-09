@@ -187,3 +187,4 @@ class MySubscriptionView(APIView):
                 'status': 'active',
                 'is_active': True,
                 })
+
