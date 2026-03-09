@@ -1,4 +1,4 @@
-import razorpay
+
 import json
 import os
 from datetime import timedelta
@@ -12,7 +12,10 @@ from .models import Plan, Subscription
 RAZORPAY_KEY_ID     = os.getenv('RAZORPAY_KEY_ID', '')
 RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET', '')
 
-
+try:
+    import razorpay
+except ImportError:
+    razorpay = None
 def get_razorpay_client():
     return razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 
